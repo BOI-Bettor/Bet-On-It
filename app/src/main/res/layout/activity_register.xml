@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etUsername2"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/design_default_color_on_primary"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="259dp"
+        android:layout_height="249dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@mipmap/logo_foreground"
+        tools:srcCompat="@mipmap/logo_foreground" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/design_default_color_background"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="257"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/design_default_color_surface"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>
