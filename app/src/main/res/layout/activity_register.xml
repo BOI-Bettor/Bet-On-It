@@ -8,17 +8,18 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/etUsername2"
+        android:id="@+id/user_DOB"
         android:layout_width="257dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etUsername"
+        android:layout_below="@+id/email"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginRight="15dp"
-        android:background="@color/design_default_color_on_primary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/design_default_color_surface"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:hint="@string/user_DOB_hint"
+        android:inputType="date" />
 
     <ImageView
         android:id="@+id/logo"
@@ -34,32 +35,45 @@
         tools:srcCompat="@mipmap/logo_foreground" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/email"
         android:layout_width="257dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_alignParentTop="false"
+        android:layout_below="@+id/username"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginRight="12dp"
         android:background="@color/design_default_color_background"
         android:ems="10"
+        android:hint="@string/email_hint"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="257"
+        android:id="@+id/username"
+        android:layout_width="257dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/etEmail"
-        android:layout_alignParentTop="false"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginRight="12dp"
         android:background="@color/design_default_color_surface"
         android:ems="10"
+        android:hint="@string/username_hint"
         android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_DOB"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/design_default_color_on_primary"
+        android:ems="10"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword" />
 
 </RelativeLayout>

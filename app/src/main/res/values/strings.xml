@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BetOnIt_BETTOR</string>
-
+    <string name="user_DOB_hint">Date Of Birth</string>
+    <string name="email_hint">Email</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
 </resources>
