@@ -4,4 +4,7 @@
     <string name="email_hint">Email</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
+    <string name="signup">Sign Up</string>
+    <string name="tvSignup">Already have an account?</string>
+    <string name="tvLogin">Login</string>
 </resources>
