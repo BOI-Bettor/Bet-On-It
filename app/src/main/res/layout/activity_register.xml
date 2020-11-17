@@ -77,7 +77,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/signup_button"
+        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
@@ -91,7 +91,7 @@
         android:id="@+id/tvSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signup_button"
+        android:layout_below="@+id/login_button"
         android:layout_alignParentStart="true"
         android:layout_marginStart="79dp"
         android:layout_marginTop="12dp"
@@ -104,13 +104,13 @@
         android:id="@+id/textView2"
         android:layout_width="82dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signup_button"
+        android:layout_below="@+id/login_button"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="6dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="79dp"
         android:layout_toEndOf="@+id/tvSignup"
-        android:text="@string/tvLogin"
+        android:text="@string/Login"
         android:textAlignment="textStart"
         android:textColor="@color/colorSecondary"
         android:textStyle="bold" />
