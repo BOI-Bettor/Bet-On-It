@@ -1,8 +1,8 @@
 # Bet-On-It
 # Sprint Cycle IV 11/10/2020 
 ## Use Cases
-- [x] A BETTOR registers for an account
-<img src="https://i.imgur.com/bh3iiDT.gif"><br>
+- [x] A BETTOR registers for an account 
+<img src="https://i.imgur.com/04BDn7o.gif">
 
 - [x] A BETTOR signs in to his/her account
 - [ ] A BETTOR lists his/her betting history
