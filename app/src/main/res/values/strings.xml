@@ -13,4 +13,9 @@
     <string name="reject">reject</string>
     <string name="username">Username</string>
     <string name="location">Location</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">HN4zvsNdFVKCysvRvkofvxiH0siW8FJpUuNc9htf</string>
+    <string name="back4app_client_key">HoK9JoBJTyHpwKiKthv5TZT1pXUr7qMTuKf4KpHo</string>
+    <string name="confirmHint">Confirm Password</string>
+    <string name="imgLogo">Bet On It Logo</string>
 </resources>
