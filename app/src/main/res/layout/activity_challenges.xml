@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    -<RelativeLayout
+    tools:context=".ChallengesRV"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/rvChallenges"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/recycler_view"/>
+
+</RelativeLayout>

@@ -8,4 +8,7 @@
     <string name="tvSignup">Already have an account?</string>
     <string name="Login">Login</string>
     <string name="tvLogin">New here?</string>
+    <string name="challenge_request">has challenged you</string>
+    <string name="accept">accept</string>
+    <string name="reject">reject</string>
 </resources>
