@@ -11,4 +11,6 @@
     <string name="challenge_request">has challenged you</string>
     <string name="accept">accept</string>
     <string name="reject">reject</string>
+    <string name="username">Username</string>
+    <string name="location">Location</string>
 </resources>
