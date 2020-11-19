@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BetOnIt_BETTOR</string>
+    <string name="app_name">Bet On It</string>
     <string name="user_DOB_hint">Date Of Birth</string>
     <string name="email_hint">Email</string>
     <string name="username_hint">Username</string>
@@ -18,6 +18,13 @@
     <string name="back4app_client_key">HoK9JoBJTyHpwKiKthv5TZT1pXUr7qMTuKf4KpHo</string>
     <string name="confirmHint">Confirm Password</string>
     <string name="imgLogo">Bet On It Logo</string>
-    <string name="slogan">Let\'s Bet!</string>
-    <string name="create_a_wager">Create a wager</string>
+    <string name="search">Search</string>
+    <string name="createWager">Create a Wager</string>
+    <string name="disChallenge">Display Challenges</string>
+    <string name="findChallenger">Find Opponents</string>
+    <string name="chlHistory">Betting History</string>
+    <string name="arb">Arbitration</string>
+    <string name="bet">Betting</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

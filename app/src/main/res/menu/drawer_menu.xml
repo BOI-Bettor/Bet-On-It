@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/bet">
+            <item
+                android:id="@+id/nav_wager"
+                android:icon="@drawable/ic_bet"
+                android:title="@string/createWager" />
+
+            <item
+                android:id="@+id/nav_challenge"
+                android:icon="@drawable/ic_wage"
+                android:title="@string/disChallenge" />
+
+            <item
+                android:id="@+id/nav_users"
+                android:icon="@drawable/ic_search"
+                android:title="@string/findChallenger" />
+
+            <item
+                android:id="@+id/nav_hist"
+                android:icon="@drawable/ic_history"
+                android:title="@string/chlHistory" />
+        </item>
+    </group>
+
+    <item android:title="@string/arb">
+        <menu>
+            <item
+                android:id="@+id/nav_AcceptCase"
+                android:icon="@drawable/ic_arb"
+                android:title="Accept A Case" />
+
+            <item
+                android:id="@+id/nav_ShowCase"
+                android:icon="@drawable/ic_cases"
+                android:title="Display Cases" />
+        </menu>
+    </item>
+
+
+</menu>

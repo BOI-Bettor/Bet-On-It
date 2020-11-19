@@ -24,23 +24,21 @@ public class LoginActivity extends AppCompatActivity {
     public static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPassword;
-    private Button btnLogin;
-    private TextView btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        if(ParseUser.getCurrentUser() != null)
-//        {
-//            checkAdminUser();
-//        }
+        if(ParseUser.getCurrentUser() != null)
+        {
+            checkAdminUser();
+        }
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnLogin);
-        btnRegister = findViewById(R.id.tvSignUp);
+        Button btnLogin = findViewById(R.id.btnLogin);
+        TextView btnRegister = findViewById(R.id.tvSignUp);
 
         // Login User to Bet On It
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void done(ParseUser parseUser, ParseException e) {
                     if (e != null) {
                         Log.e(TAG, "Issue with login", e);
-                        Toast.makeText(LoginActivity.this, "Unable to log in. Please try again.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Invalid Username/Password. Please try again.", Toast.LENGTH_SHORT).show();
                         return;
                     }
                     // Check to see if the user if an admin or standard bettor
@@ -139,11 +137,6 @@ public class LoginActivity extends AppCompatActivity {
         Intent i = new Intent(this, BettorActivity.class);
         startActivity(i);
         finish();
-    }
-
-    private void goRegisterActivity() {
-        Intent i = new Intent(this, RegisterActivity.class);
-        startActivity(i);
     }
 
     private void goAdminActivity() {
