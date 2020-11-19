@@ -11,4 +11,5 @@
     <color name="ErrorRed">#F30700</color>
     <color name="ErrorRedDark">#BB0700</color>
     <color name="PastelGreen">#37E643</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
