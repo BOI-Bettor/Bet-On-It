@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item android:title="@string/bet">
+    <group
+        android:id="@+id/betting"
+        android:checkableBehavior="single">
             <item
                 android:id="@+id/nav_wager"
                 android:icon="@drawable/ic_bet"
@@ -24,18 +25,17 @@
                 android:id="@+id/nav_hist"
                 android:icon="@drawable/ic_history"
                 android:title="@string/chlHistory" />
-        </item>
     </group>
 
     <item android:title="@string/arb">
         <menu>
             <item
-                android:id="@+id/nav_AcceptCase"
+                android:id="@+id/nav_acceptcase"
                 android:icon="@drawable/ic_arb"
                 android:title="Accept A Case" />
 
             <item
-                android:id="@+id/nav_ShowCase"
+                android:id="@+id/nav_showcases"
                 android:icon="@drawable/ic_cases"
                 android:title="Display Cases" />
         </menu>
