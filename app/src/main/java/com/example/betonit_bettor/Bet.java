@@ -6,12 +6,12 @@ import com.parse.ParseUser;
 
 @ParseClassName("Bet")
 public class Bet extends ParseObject {
-    public static final String KEY_BET_NAME = "bet_Name";
-    public static final String KEY_BET_AMOUNT = "bet_Amount";
-    public static final String KEY_BET_STATUS = "bet_Status";
-    public static final String KEY_BET_DESCRIPTION = "bet_Desc";
-    public static final String KEY_BET_CHALLENGER = "bet_User_Challenger";
-    public static final String KEY_BET_CHALLENGEE = "bet_User_Challengee";
+    private static final String KEY_BET_NAME = "bet_Name";
+    private static final String KEY_BET_AMOUNT = "bet_Amount";
+    private static final String KEY_BET_STATUS = "bet_Status";
+    private static final String KEY_BET_DESCRIPTION = "bet_Desc";
+    private static final String KEY_BET_CHALLENGER = "bet_User_Challenger";
+    private static final String KEY_BET_CHALLENGEE = "bet_User_Challengee";
 //    public static final String KEY_BET_START = "bet_Start";
 //    public static final String KEY_BET_RESC = "bet_Resc";
 //    public static final String KEY_BET_END = "bet_End";
@@ -72,6 +72,7 @@ public class Bet extends ParseObject {
     {
         put(KEY_BET_CHALLENGEE, challengee);
     }
+
 
 //    public Date getBetStart() {
 //        return  getDate(KEY_BET_START);

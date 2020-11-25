@@ -25,6 +25,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SearchActivity extends AppCompatActivity {
@@ -34,7 +35,6 @@ public class SearchActivity extends AppCompatActivity {
 
     ListView listView;
     CustomAdapter customAdapter;
-
     List<UsersModel> usersList = new ArrayList<>();
 
     @Override
@@ -42,26 +42,12 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        queryUsers(usersList);
         listView = findViewById(R.id.listview);
-
-        ParseQuery<ParseUser> query = ParseUser.getQuery();
-        query.findInBackground(new FindCallback<ParseUser>() {
-            public void done(List<ParseUser> users, ParseException e) {
-
-                if (e == null) {
-                    for (ParseUser user : users) {
-                        fullname = user.getString("user_First") + " " + user.getString("user_Last");
-                        UsersModel usersModel = new UsersModel(user.getUsername(), fullname, R.drawable.ic_user);
-                        usersList.add(usersModel);
-                    }
-                } else {
-                    Log.e(TAG, "Something went wrong.");
-                }
-            }
-        });
 
         customAdapter = new CustomAdapter(usersList, this);
         listView.setAdapter(customAdapter);
+        Log.i(TAG, "View appears.");
 
     }
 
@@ -127,17 +113,17 @@ public class SearchActivity extends AppCompatActivity {
 
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
-            convertView = getLayoutInflater().inflate(R.layout.item_result, null);
+            View view = getLayoutInflater().inflate(R.layout.item_result, null);
 
-            TextView usernames = convertView.findViewById(R.id.name);
-            TextView nameRN = convertView.findViewById(R.id.nameRN);
-            ImageView imageView = convertView.findViewById(R.id.images);
+            TextView usernames = view.findViewById(R.id.name);
+            TextView nameRN = view.findViewById(R.id.nameRN);
+            ImageView imageView = view.findViewById(R.id.images);
 
             usernames.setText(filteredList.get(position).getUserName());
             nameRN.setText(filteredList.get(position).getFullName());
             imageView.setImageResource(filteredList.get(position).getImg());
 
-            convertView.setOnClickListener(new View.OnClickListener() {
+            view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Log.i(TAG, "item clicked");
@@ -147,7 +133,7 @@ public class SearchActivity extends AppCompatActivity {
                 }
             });
 
-            return convertView;
+            return view;
         }
 
         @Override
@@ -185,6 +171,25 @@ public class SearchActivity extends AppCompatActivity {
             };
             return filter;
         }
+    }
+
+    public void queryUsers (final List<UsersModel> usersList) {
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.findInBackground(new FindCallback<ParseUser>() {
+            public void done(List<ParseUser> users, ParseException e) {
+
+                if (e == null) {
+                    Log.i(TAG, "Users stashed in background.");
+                    for (ParseUser user : users) {
+                        fullname = user.getString("user_First") + " " + user.getString("user_Last");
+                        UsersModel usersModel = new UsersModel(user.getUsername(), fullname, R.drawable.ic_user);
+                        usersList.add(usersModel);
+                    }
+                } else {
+                    Log.e(TAG, "Something went wrong.");
+                }
+            }
+        });
     }
 
 }
