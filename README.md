@@ -13,4 +13,11 @@
 ## Use Cases
 - [ ] Create a wager
 - [ ] Show challenges
-- [ ] Find bettor (show bettors with a filter)
+- [X] Find bettor (show bettors with a filter)
+<img src="">
+
+# Sprint Cycle VI 11/24/2020
+## Use Cases
+- [ ] Edit account information
+- [ ] Accept a challenge
+- [ ] Reject a challenge
