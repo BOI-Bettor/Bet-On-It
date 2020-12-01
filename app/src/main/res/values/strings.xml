@@ -41,5 +41,6 @@
     <string name="resc_date">Rescind date</string>
     <string name="resc_time">Rescind time</string>
     <string name="desc">Description</string>
+    <string name="confirm">Confirm</string>
     />
 </resources>
