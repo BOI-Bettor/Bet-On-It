@@ -11,13 +11,20 @@
 
 # Sprint Cycle V 11/19/2020
 ## Use Cases
-- [ ] Create a wager
-- [ ] Show challenges
+- [X] Create a wager
+<img src="https://i.imgur.com/okOQQXf.gif">
+
+- [X] Show challenges
+<img src="https://i.imgur.com/ZjsamE2.gif">
+
 - [X] Find bettor (show bettors with a filter)
-<img src="">
+<img src="https://i.imgur.com/BEiqWC0.gif">
 
 # Sprint Cycle VI 11/24/2020
 ## Use Cases
-- [ ] Edit account information
-- [ ] Accept a challenge
-- [ ] Reject a challenge
+- [X] Edit account information
+<img src="https://i.imgur.com/vACyZNh.mp4">
+
+- [X] Accept a challenge
+- [X] Reject a challenge
+<img src="https://i.imgur.com/8RFs6Q4.gif">
