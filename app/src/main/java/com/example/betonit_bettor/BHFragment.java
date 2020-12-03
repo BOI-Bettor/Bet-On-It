@@ -13,6 +13,9 @@ public class BHFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        getActivity().setTitle("Betting History");
+
         return inflater.inflate(R.layout.fragment_bettinghistory, container, false);
     }
 }

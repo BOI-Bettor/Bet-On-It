@@ -24,6 +24,7 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
+import org.parceler.Parcels;
 import org.w3c.dom.Text;
 
 public class BettorActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -39,12 +40,10 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
         setContentView(R.layout.activity_bettor);
 
         // IMPLEMENT TOOLBAR
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // GET USERNAME AND REAL NAME FROM CURRENT USER.
-
         username = parseUser.getUsername();
         realName = parseUser.getString("user_First") + " " + parseUser.getString("user_Last");
 
@@ -52,7 +51,6 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         // GET THE CURRENT USER AND THEIR REAL NAME TO APPEAR ON NAVIGATION DRAWER.
-
         View headerView = navigationView.getHeaderView(0);
         TextView navUsername = headerView.findViewById(R.id.userTV);
         TextView navRealname = headerView.findViewById(R.id.userRNTV);
@@ -63,27 +61,30 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
         navigationView.setNavigationItemSelectedListener(this);
 
         // ENABLE CLOSING AND OPENING OF NAVIGATION DRAWER.
-
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         // DEFAULT FRAGMENT TO OPEN.
-
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new CWFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_wager);
+                    new UPFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_prof);
         }
 
     }
 
     // SWITCH CASE TO CHANGE FRAGMENTS.
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+
+            case R.id.nav_prof:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new UPFragment()).commit();
+                break;
+
             case R.id.nav_wager:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new CWFragment()).commit();
@@ -95,10 +96,10 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
                 break;
 
             case R.id.nav_users:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-//                        new FOFragment()).commit();
-                Intent i = new Intent(this, SearchActivity.class);
-                startActivity(i);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FOFragment()).commit();
+//                Intent i = new Intent(this, SearchActivity.class);
+//                startActivity(i);
                 break;
 
             case R.id.nav_hist:
@@ -119,7 +120,6 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
     }
 
     // ENSURE THE BACK BUTTON DOES NOT LOG YOU OUT/CLOSE THE APP IF THE DRAWER IS OPEN.
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -129,6 +129,7 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
         }
     }
 
+    // LOGGING OUT OF APPLICATION.
     public void signOut(View view) {
         Log.i(TAG,"aaaaaaaaaa clicked log out");
         ParseUser.logOut();
@@ -151,5 +152,6 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
             }
         });
     }
+
 }
 

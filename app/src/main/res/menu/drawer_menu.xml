@@ -6,25 +6,31 @@
     <group
         android:id="@+id/betting"
         android:checkableBehavior="single">
-            <item
-                android:id="@+id/nav_wager"
-                android:icon="@drawable/ic_bet"
-                android:title="@string/createWager" />
 
-            <item
-                android:id="@+id/nav_challenge"
-                android:icon="@drawable/ic_wage"
-                android:title="@string/disChallenge" />
+        <item
+            android:id="@+id/nav_prof"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="@string/profile" />
 
-            <item
-                android:id="@+id/nav_users"
-                android:icon="@drawable/ic_search"
-                android:title="@string/findChallenger" />
+        <item
+            android:id="@+id/nav_wager"
+            android:icon="@drawable/ic_bet"
+            android:title="@string/createWager" />
 
-            <item
-                android:id="@+id/nav_hist"
-                android:icon="@drawable/ic_history"
-                android:title="@string/chlHistory" />
+        <item
+            android:id="@+id/nav_challenge"
+            android:icon="@drawable/ic_wage"
+            android:title="@string/disChallenge" />
+
+        <item
+            android:id="@+id/nav_users"
+            android:icon="@drawable/ic_search"
+            android:title="@string/findChallenger" />
+
+        <item
+            android:id="@+id/nav_hist"
+            android:icon="@drawable/ic_history"
+            android:title="@string/chlHistory" />
     </group>
 
     <item android:title="@string/arb">

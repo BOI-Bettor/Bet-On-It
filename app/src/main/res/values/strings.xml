@@ -12,10 +12,8 @@
     <string name="accept">accept</string>
     <string name="reject">reject</string>
     <string name="username">Username</string>
-    <string name="location">Location</string>
+    <string name="addr">Address</string>
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
-<!--    <string name="back4app_app_id">HN4zvsNdFVKCysvRvkofvxiH0siW8FJpUuNc9htf</string>-->
-<!--    <string name="back4app_client_key">HoK9JoBJTyHpwKiKthv5TZT1pXUr7qMTuKf4KpHo</string>-->
     <string name="back4app_app_id">Jd9Mbe2J6LaTOfwhH4N7vV1fbcn5ML3ImH65Me4W</string>
     <string name="back4app_client_key">CqbgDG6Mc9BOIzsGzFltxxR1nAlSDlk2wzPMVSK5</string>
     <string name="confirmHint">Confirm Password</string>
@@ -29,8 +27,15 @@
     <string name="bet">Betting</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="editBtn">Edit Button</string>
+    <string name="imgUserIcon">Image of User Icon</string>
+    <string name="faveBet">Favorite Bets</string>
+    <string name="fullName">Full Name</string>
+    <string name="phone">Phone</string>
+    <string name="save">Save Changes</string>
+    <string name="editprof">Edit Profile</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string> <!-- what is this for?? -->
     <string name="createwager">Create A Wager</string>
     <string name="bet_amount">Amount</string>
     <string name="bet_type">Type</string>
@@ -42,5 +47,5 @@
     <string name="resc_time">Rescind time</string>
     <string name="desc">Description</string>
     <string name="confirm">Confirm</string>
-    />
+    <string name="betName">Name of Bet</string>
 </resources>

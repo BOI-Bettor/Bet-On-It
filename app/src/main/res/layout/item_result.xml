@@ -34,7 +34,7 @@
             android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
             android:paddingTop="2dp"
-            android:text="@string/location" />
+            android:text="@string/fullName" />
     </RelativeLayout>
 
 </LinearLayout>

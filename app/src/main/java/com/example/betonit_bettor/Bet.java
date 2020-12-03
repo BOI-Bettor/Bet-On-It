@@ -4,18 +4,19 @@ import com.parse.ParseClassName;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
+import java.util.Date;
+
 @ParseClassName("Bet")
 public class Bet extends ParseObject {
     private static final String KEY_BET_NAME = "bet_Name";
     private static final String KEY_BET_AMOUNT = "bet_Amount";
     private static final String KEY_BET_STATUS = "bet_Status";
     private static final String KEY_BET_DESCRIPTION = "bet_Desc";
-    private static final String KEY_BET_CHALLENGER = "bet_User_Challenger";
-    private static final String KEY_BET_CHALLENGEE = "bet_User_Challengee";
-//    public static final String KEY_BET_START = "bet_Start";
-//    public static final String KEY_BET_RESC = "bet_Resc";
-//    public static final String KEY_BET_END = "bet_End";
-//    public static final String KEY_BET_TYPE = "bet_Type";
+    private static final String KEY_BET_CHALLENGER = "bet_Challenger";
+    private static final String KEY_BET_CHALLENGEE = "bet_Challengee";
+    private static final String KEY_BET_START = "bet_Start";
+    private static final String KEY_BET_END = "bet_End";
+    private static final String KEY_BET_TYPE = "bet_Type";
 
     public String getBetName() {
         return getString(KEY_BET_NAME);
@@ -30,7 +31,7 @@ public class Bet extends ParseObject {
         return getInt(KEY_BET_AMOUNT);
     }
 
-    public void setBetAmount(int bet_Amount)
+    public void setBetAmount(double bet_Amount)
     {
         put(KEY_BET_AMOUNT, bet_Amount);
     }
@@ -47,6 +48,18 @@ public class Bet extends ParseObject {
     public String getBetDescription() {
         return getString(KEY_BET_DESCRIPTION);
     }
+
+    public String getBetStart() { return getString(KEY_BET_START); }
+
+    public void setBetStart(Date bet_Start) { put(KEY_BET_START, bet_Start);}
+
+    public String getBetEnd() { return getString(KEY_BET_END); }
+
+    public void setBetEnd(Date bet_End) { put(KEY_BET_END, bet_End);}
+
+    public String getBetType() { return getString(KEY_BET_TYPE); }
+
+    public void setBetType(String bet_Type) { put(KEY_BET_TYPE, bet_Type);}
 
     public void setBetDescription(String bet_Desc)
     {
@@ -73,37 +86,4 @@ public class Bet extends ParseObject {
         put(KEY_BET_CHALLENGEE, challengee);
     }
 
-
-//    public Date getBetStart() {
-//        return  getDate(KEY_BET_START);
-//    }
-//
-//    public void setBetStart(Date bet_Start) {
-//        put(KEY_BET_START, bet_Start);
-//    }
-//
-//    public Date getBetEnd() {
-//        return  getDate(KEY_BET_END);
-//    }
-//
-//    public void setBetEnd(Date bet_End) {
-//        put(KEY_BET_START, bet_End);
-//    }
-//
-//    public Date getBetResc() {
-//        return  getDate(KEY_BET_RESC);
-//    }
-//
-//    public void setBetResc(Date bet_Resc) {
-//        put(KEY_BET_RESC, bet_Resc);
-//    }
-//
-//    public String getBetType() {
-//        return getString(KEY_BET_TYPE);
-//    }
-//
-//    public void setBetType(String bet_Type)
-//    {
-//        put(KEY_BET_TYPE, bet_Type);
-//    }
 }
