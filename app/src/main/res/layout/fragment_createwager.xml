@@ -2,360 +2,375 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/GreyWhite"
-    android:padding="5dp">
+    android:layout_width="match_parent">
 
-    <ImageView
-        android:id="@+id/ivResctime2"
-        android:layout_width="26dp"
-        android:layout_height="140dp"
-        android:layout_below="@+id/ivResctime"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="3dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_edit" />
 
-    <Button
-        android:id="@+id/pick_resctime_button"
-        android:layout_width="77dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/etCAWrescdate"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="80dp"
-        android:background="@color/GreyWhite"
-        android:fontFamily="@font/roboto"
-        android:text="@string/pick_time"
-        android:textAlignment="center"
-        android:textSize="10sp" />
-
-    <EditText
-        android:id="@+id/etCAWresctime"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWrescdate"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="datetime"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/resc_time" />
-
-    <ImageView
-        android:id="@+id/ivResctime"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/ivRescdate"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_times_circle" />
-
-    <Button
-        android:id="@+id/pick_rescdate_button"
-        android:layout_width="77dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/etCAWstarttime"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="80dp"
-        android:background="@color/GreyWhite"
-        android:fontFamily="@font/roboto"
-        android:text="@string/pick_date"
-        android:textAlignment="center"
-        android:textSize="10sp" />
-
-    <EditText
-        android:id="@+id/etCAWrescdate"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWstarttime"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="datetime"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/resc_date" />
-
-    <ImageView
-        android:id="@+id/ivRescdate"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/ivStarttime"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_calendar_times" />
-
-    <Button
-        android:id="@+id/pick_time_button"
-        android:layout_width="77dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/etCAWstartdate"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="80dp"
-        android:background="@color/GreyWhite"
-        android:fontFamily="@font/roboto"
-        android:text="@string/pick_time"
-        android:textAlignment="center"
-        android:textSize="10sp" />
-
-    <EditText
-        android:id="@+id/etCAWstarttime"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWstartdate"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="datetime"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/start_time" />
-
-    <ImageView
-        android:id="@+id/ivStarttime"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/ivStart"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_clock" />
-
-    <EditText
-        android:id="@+id/etCAWstartdate"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWtype"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="datetime"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/start_date" />
-
-    <ImageView
-        android:id="@+id/ivStart"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/ivType"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_calendar" />
-
-    <EditText
-        android:id="@+id/etCAWtype"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWamount"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/bet_type" />
-
-    <ImageView
-        android:id="@+id/ivType"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/ivAmount"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_question_circle" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/CAWtoolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
-
-    <ImageView
-        android:id="@+id/ivAmount"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/ivUsername"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWamount"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_money_bill_alt" />
-
-    <TextView
-        android:id="@+id/tvCreateWager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/roboto"
-        android:text="@string/createwager"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/etCAWusername"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/CAWtoolbar"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/username" />
-
-    <ImageView
-        android:id="@+id/ivUsername"
-        android:layout_width="30dp"
-        android:layout_height="34dp"
-        android:layout_below="@+id/CAWtoolbar"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/etCAWusername"
-        android:background="@color/design_default_color_background"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_user" />
-
-    <Button
-        android:id="@+id/pick_date_button"
-        android:layout_width="77dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/etCAWtype"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="80dp"
-        android:background="@color/GreyWhite"
-        android:fontFamily="@font/roboto"
-        android:text="@string/pick_date"
-        android:textAlignment="center"
-        android:textSize="10sp" />
-
-    <EditText
-        android:id="@+id/etCAWamount"
-        android:layout_width="239dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWusername"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="68dp"
-        android:background="@color/design_default_color_surface"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="@string/bet_amount" />
-
-    <EditText
-        android:id="@+id/etCAWDescription"
-        android:layout_width="248dp"
-        android:layout_height="140dp"
-        android:layout_below="@+id/etCAWresctime"
-        android:layout_alignParentStart="true"
+    <ScrollView
+        android:layout_width="406dp"
+        android:layout_height="651dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="15dp"
-        android:background="@color/design_default_color_background"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        tools:text="@string/desc" />
+        android:layout_marginBottom="12dp">
 
-    <Button
-        android:id="@+id/CAW_confirm_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etCAWDescription"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:background="@drawable/sec_color_gradient"
-        android:fontFamily="@font/roboto"
-        android:text="@string/confirm" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/GreyWhite"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/CAW_confirm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWDescription"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="21dp"
+                android:background="@drawable/sec_color_gradient"
+                android:fontFamily="@font/roboto"
+                android:text="@string/confirm" />
+
+            <EditText
+                android:id="@+id/etCAWDescription"
+                android:layout_width="248dp"
+                android:layout_height="140dp"
+                android:layout_below="@+id/etCAWresctime"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/design_default_color_background"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                tools:text="@string/desc" />
+
+            <EditText
+                android:id="@+id/etCAWamount"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWusername"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/bet_amount" />
+
+            <Button
+                android:id="@+id/pick_date_button"
+                android:layout_width="77dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/etCAWtype"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="80dp"
+                android:background="@color/GreyWhite"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pick_date"
+                android:textAlignment="center"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/ivUsername"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/CAWtoolbar"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWusername"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_user" />
+
+            <EditText
+                android:id="@+id/etCAWusername"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CAWtoolbar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/username" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/CAWtoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
+            <TextView
+                android:id="@+id/tvCreateWager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/createwager"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivAmount"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/ivUsername"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_money_bill_alt" />
+
+            <ImageView
+                android:id="@+id/ivType"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/ivAmount"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_question_circle" />
+
+            <EditText
+                android:id="@+id/etCAWtype"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWamount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/bet_type" />
+
+            <ImageView
+                android:id="@+id/ivStartdate"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/ivType"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <EditText
+                android:id="@+id/etCAWstartdate"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWtype"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="datetime"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/start_date" />
+
+            <ImageView
+                android:id="@+id/ivDescription"
+                android:layout_width="26dp"
+                android:layout_height="140dp"
+                android:layout_below="@+id/ivResctime"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="3dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_edit" />
+
+            <EditText
+                android:id="@+id/etCAWresctime"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWrescdate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="datetime"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/resc_time" />
+
+            <Button
+                android:id="@+id/pick_resctime_button"
+                android:layout_width="77dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/etCAWrescdate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="80dp"
+                android:background="@color/GreyWhite"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pick_time"
+                android:textAlignment="center"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/ivResctime"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/ivRescdate"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_times_circle" />
+
+            <Button
+                android:id="@+id/pick_rescdate_button"
+                android:layout_width="77dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/etCAWstarttime"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="80dp"
+                android:background="@color/GreyWhite"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pick_date"
+                android:textAlignment="center"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etCAWrescdate"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWstarttime"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="datetime"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/resc_date" />
+
+            <Button
+                android:id="@+id/pick_time_button"
+                android:layout_width="77dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/etCAWstartdate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="80dp"
+                android:background="@color/GreyWhite"
+                android:fontFamily="@font/roboto"
+                android:text="@string/pick_time"
+                android:textAlignment="center"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/ivRescdate"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/ivStarttime"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_calendar_times" />
+
+            <EditText
+                android:id="@+id/etCAWstarttime"
+                android:layout_width="239dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etCAWstartdate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="68dp"
+                android:background="@color/design_default_color_surface"
+                android:ems="10"
+                android:inputType="datetime"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/start_time" />
+
+            <ImageView
+                android:id="@+id/ivStarttime"
+                android:layout_width="30dp"
+                android:layout_height="34dp"
+                android:layout_below="@+id/ivStartdate"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_toStartOf="@+id/etCAWamount"
+                android:background="@color/design_default_color_background"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_clock" />
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
