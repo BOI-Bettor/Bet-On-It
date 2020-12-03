@@ -41,6 +41,7 @@ public class ChFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_challenges, container, false);
+        getActivity().setTitle("Bet List");
 
         queryChallenges(betsList, challengers);
 
@@ -89,7 +90,7 @@ public class ChFragment extends Fragment {
     private void queryChallenges(final List<Bet> betsList, final List<String> challengers) {
 
         ParseQuery<Bet> receivedBets = ParseQuery.getQuery("Bet");
-        receivedBets.whereContains("bet_User_Challengee", ParseUser.getCurrentUser().getObjectId());
+        receivedBets.whereContains("bet_Challengee", ParseUser.getCurrentUser().getObjectId());
         receivedBets.findInBackground(new FindCallback<Bet>() {
             public void done(List<Bet> bets, ParseException e) {
                 if (e == null) {
