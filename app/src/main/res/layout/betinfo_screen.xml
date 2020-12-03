@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_background">
+
+    <TextView
+        android:id="@+id/tvDesc_field"
+        android:layout_width="232dp"
+        android:layout_height="211dp"
+        android:layout_below="@+id/tvRescind_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/tvDesc"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/tvRescind_field"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvStart_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/tvRescind"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/date/mmddyy" />
+
+    <TextView
+        android:id="@+id/tvStart_field"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvType_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/tvStart"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/date/mmddyy" />
+
+    <TextView
+        android:id="@+id/tvType_field"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvAmount_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/tvType"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tvAmount_field"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvChallenger_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/tvAmount"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/us_zipcodes" />
+
+    <TextView
+        android:id="@+id/tvBetName_field"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/tvChallenger"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/tvChallenger_field"
+        android:layout_width="221dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvBetName_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/tvChallenger"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        tools:text="@tools:sample/first_names" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRescind"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/bi_desc"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvRescind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStart"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/bi_resc"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvType"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/bi_start"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAmount"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/bi_type"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvChallenger"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/bi_amount"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBetName"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="@string/betName" />
+
+    <TextView
+        android:id="@+id/tvChallenger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBetName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/challenger_name"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

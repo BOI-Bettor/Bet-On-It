@@ -47,5 +47,12 @@
     <string name="resc_time">Rescind time</string>
     <string name="desc">Description</string>
     <string name="confirm">Confirm</string>
-    <string name="betName">Name of Bet</string>
+    <string name="betName">Name of Bet:</string>
+    <string name="betname">Bet Name:</string>
+    <string name="challenger_name">Challenger:</string>
+    <string name="bi_amount">Amount:</string>
+    <string name="bi_type">Type:</string>
+    <string name="bi_start">Start date:</string>
+    <string name="bi_resc">Rescind date:</string>
+    <string name="bi_desc">Description:</string>
 </resources>
