@@ -1,35 +1,88 @@
 package com.example.betonit_bettor;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcel;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.ParseACL;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BetInfoActivity extends AppCompatActivity {
-    public static final String TAG = "BetInfoActivity";
-    private TextView tvBetName, tvBetName_field, tvChallenger, tvChallenger_field, tvAmount, tvAmount_field, tvType, tvType_field,
-                     tvStart, tvStart_field, tvRescind, tvRescind_field, tvDesc, tvDesc_field;
+
+    String challenger;
+    String betId;
+    String TAG = "Bet Info";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.betinfo_screen);
+        setContentView(R.layout.activity_bet_info);
 
-        tvBetName = findViewById(R.id.tvBetName);
-        tvBetName_field = findViewById(R.id.tvBetName_field);
-        tvChallenger = findViewById(R.id.tvChallenger_field);
-        tvChallenger_field = findViewById(R.id.tvChallenger_field);
-        tvAmount = findViewById(R.id.tvAmount);
-        tvAmount_field = findViewById(R.id.tvAmount_field);
-        tvType = findViewById(R.id.tvType);
-        tvType_field = findViewById(R.id.tvType_field);
-        tvStart = findViewById(R.id.tvStart);
-        tvStart_field = findViewById(R.id.tvStart_field);
-        tvRescind = findViewById(R.id.tvRescind);
-        tvRescind_field = findViewById(R.id.tvRescind_field);
-        tvDesc = findViewById(R.id.tvDesc);
-        tvDesc_field = findViewById(R.id.tvDesc_field);
+        TextView username = findViewById(R.id.username);
+        TextView desc = findViewById(R.id.desc);
+        final TextView accept = findViewById(R.id.buttonAccept);
+        final TextView reject = findViewById(R.id.buttonReject);
+
+        Intent intent = getIntent();
+        if (intent.getExtras() != null) {
+            challenger = (String) intent.getSerializableExtra("challengerUser");
+            username.setText(challenger);
+            betId = (String) intent.getSerializableExtra("betObjectId");
+            Log.i(TAG, betId);
+        }
 
 
+
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ParseQuery<Bet> bet = ParseQuery.getQuery("Bet");
+                bet.getInBackground(betId, new GetCallback<Bet>() {
+                    public void done(Bet object, ParseException e) {
+                        if (e == null) {
+                            object.setBetStatus("ACCEPTED");
+                            object.saveInBackground();
+                        } else {
+                            Log.e(TAG, "Please, kill me.");
+                        }
+                    }
+                });
+            }
+        });
+
+        reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ParseQuery<Bet> bet = ParseQuery.getQuery("Bet");
+                bet.getInBackground(betId, new GetCallback<Bet>() {
+                    public void done(Bet object, ParseException e) {
+                        if (e == null) {
+                            object.setBetStatus("REJECTED");
+                                object.saveInBackground();
+                        } else {
+                            Log.e(TAG, "Please, kill me.");
+                        }
+                    }
+                });
+            }
+        });
 
     }
+}

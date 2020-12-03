@@ -45,18 +45,18 @@ public class ChFragment extends Fragment {
 
         queryChallenges(betsList, challengers);
 
+
         listView = rootView.findViewById(R.id.listview);
         customAdapter = new CustomAdapter(challengers, this.getContext());
         listView.setAdapter(customAdapter);
 
         return rootView;
-
     }
 
     public class CustomAdapter extends BaseAdapter {
 
-        private List<String> arrayList;
-        private Context context;
+        private final List<String> arrayList;
+        private final Context context;
 
         public CustomAdapter(List<String> arrayList, Context context) {
             this.arrayList = arrayList;
@@ -67,21 +67,25 @@ public class ChFragment extends Fragment {
         public int getCount() {
             return arrayList.size();
         }
+
         @Override
         public Object getItem(int position) {
-            return position;
+            return arrayList.get(position);
         }
+
         @Override
         public long getItemId(int position) {
             return position;
         }
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-             convertView = getLayoutInflater().inflate(R.layout.item_challenge, null);
+            if (convertView == null) {
+                convertView = getLayoutInflater().inflate(R.layout.item_challenge, parent, false);
+            }
 
             TextView userName = convertView.findViewById(R.id.tvUsername);
             userName.setText(arrayList.get(position));
-            Log.i(TAG, arrayList.get(0));
 
             return convertView;
         }
@@ -129,7 +133,3 @@ public class ChFragment extends Fragment {
     }
 
 }
-
-//                        Log.i(TAG, "Bet Name: " + bet.getString("bet_Name"));
-//                        Log.i(TAG, bet.getParseUser());
-//                    Log.i(TAG, ParseUser.getCurrentUser().getUsername() + " received " + bets.size() + " challenges.");

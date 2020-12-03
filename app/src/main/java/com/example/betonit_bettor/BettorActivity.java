@@ -92,7 +92,7 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
 
             case R.id.nav_challenge:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ChFragment()).commit();
+                        new ChFragment2()).commit();
                 break;
 
             case R.id.nav_users:
