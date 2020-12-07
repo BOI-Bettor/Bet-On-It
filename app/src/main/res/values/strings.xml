@@ -49,4 +49,11 @@
     <string name="confirm">Confirm</string>
     <string name="betName">Name of Bet</string>
     <string name="betInfo">Bet Information</string>
+    <string name="challenger_name">Challenger:</string>
+    <string name="bi_betname">Bet Name:</string>
+    <string name="bi_amount">Amount:</string>
+    <string name="bi_type">Type:</string>
+    <string name="bi_start">Start Date:</string>
+    <string name="bi_resc">Rescind Date:</string>
+    <string name="bi_desc">Description:</string>
 </resources>
