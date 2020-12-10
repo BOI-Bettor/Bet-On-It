@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    tools:context=".PendingDetailActivity">
+
+    <TextView
+        android:id="@+id/tvRatedCaseId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentTop="true"
+        tools:text="CaseId" />
+
+    <TextView
+        android:id="@+id/tvRatedCaseWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Winner: "
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/tvRatedCaseId"/>
+
+    <TextView
+        android:id="@+id/tvRatedCaseWinnerDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRatedCaseWinner"
+        android:text="Challenger Description:"
+        android:layout_marginBottom="40dp" />
+
+    <TextView
+        android:id="@+id/tvChallengerEvidenceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRatedCaseWinnerDesc"
+        android:text="Challenger Description:"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvChallengerEvidence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvChallengerEvidenceLabel"
+        android:layout_marginBottom="25dp"
+        tools:text="User1" />
+
+    <TextView
+        android:id="@+id/tvChallengeeEvidenceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvChallengerEvidence"
+        android:text="Challengee Description:"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvChallengeeEvidence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvChallengeeEvidenceLabel"
+        android:layout_marginBottom="25dp"
+        tools:text="User1" />
+
+    <TextView
+        android:id="@+id/tvRatedCaseRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tvChallengeeEvidence"
+        android:text="Rate this case (1-5): "
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/etRatedCaseRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvChallengeeEvidence"
+        android:layout_toRightOf="@id/tvRatedCaseRating"
+        android:inputType="number"
+        tools:text="5" />
+
+    <Button
+        android:id="@+id/btnSubmitRating"
+        android:layout_width="196dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="Submit" />
+
+</RelativeLayout>

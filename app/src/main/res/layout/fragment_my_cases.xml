@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MyCasesFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvMyFragLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_cases_fragment" />
+
+    <TextView
+        android:id="@+id/tvMyCasesLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMyFragLabel"
+        android:text="My Cases ()" />
+
+    <TableLayout
+        android:id="@+id/tlMyCaseHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMyCasesLabel"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tvMyBetName"
+                android:layout_gravity="center"
+                android:text="Bet Name" />
+
+            <TextView
+                android:id="@+id/tvDateAssigned"
+                android:layout_gravity="center"
+                android:text="Date Assigned" />
+
+            <TextView
+                android:id="@+id/tvDateDue"
+                android:layout_gravity="center"
+                android:text="Date Due" />
+
+
+        </TableRow>
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyCases"
+        android:layout_below="@id/tlMyCaseHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

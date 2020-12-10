@@ -49,4 +49,8 @@
     <string name="confirm">Confirm</string>
     <string name="betName">Name of Bet</string>
     <string name="betInfo">Bet Information</string>
+    <string name="slogan">Put Your Money Where Your Mouth Is</string>
+    <string name="rated_cases_fragment">Rated Cases Fragment</string>
+    <string name="pending_cases_fragment">Pending Cases Fragment</string>
+    <string name="my_cases_fragment">My Cases Fragment</string>
 </resources>

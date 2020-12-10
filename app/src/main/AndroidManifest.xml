@@ -15,6 +15,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".UserViewActivity" />
         <activity android:name=".BetInfoActivity" />
+        <activity android:name=".PendingDetailActivity"/>
+        <activity android:name=".MyCasesActivity" />
+        <activity android:name=".RatedDetailActivity"/>
         <activity android:name=".AdminActivity" />
         <activity android:name=".BettorActivity" />
         <activity android:name=".RegisterActivity" />
