@@ -109,10 +109,20 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
 
             case R.id.nav_acceptcase:
                 Toast.makeText(this, "Not our use case.", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new PendingCasesFragment()).commit();
                 break;
 
             case R.id.nav_showcases:
                 Toast.makeText(this, "Also not our use case.", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new MyCasesFragment()).commit();
+                break;
+
+            case R.id.nav_ratecases:
+                Toast.makeText(this, "Also definitely not our use case.", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new RatedCasesFragment()).commit();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRatedCaseItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:id="@+id/tvCaseName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dp"
+        android:text="Sample Bet Name" />
+
+    <TextView
+        android:id="@+id/tvBetChallenger"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCaseName"
+        android:text="Biden" />
+
+    <TextView
+        android:id="@+id/tvCaseVersus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBetChallenger"
+        android:text="vs." />
+
+    <TextView
+        android:id="@+id/tvBetChallengee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCaseVersus"
+        android:layout_marginBottom="20dp"
+        android:text="The Loser" />
+
+    <Button
+        android:id="@+id/btnRatedCaseAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvBetChallengee"
+        android:layout_alignParentRight="true"
+        android:text="Rate this Case?" />
+
+
+</RelativeLayout>

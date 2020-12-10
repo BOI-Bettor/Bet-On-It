@@ -37,13 +37,18 @@
         <menu>
             <item
                 android:id="@+id/nav_acceptcase"
-                android:icon="@drawable/ic_arb"
+                android:icon="@drawable/ic_edit"
                 android:title="Accept A Case" />
 
             <item
                 android:id="@+id/nav_showcases"
                 android:icon="@drawable/ic_cases"
                 android:title="Display Cases" />
+
+            <item
+                android:icon="@drawable/ic_arb"
+                android:id="@+id/nav_ratecases"
+                android:title="Rate Completed Cases" />
         </menu>
     </item>
 

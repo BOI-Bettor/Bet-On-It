@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RatedCasesFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tvRatedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rated_cases_fragment" />
+
+    <TextView
+        android:id="@+id/tvRatedCasesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRatedLabel"
+        android:text="Rated Cases ()" />
+
+    <TableLayout
+        android:id="@+id/tlRatedCaseHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRatedCasesLabel"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tvBetName"
+                android:layout_gravity="center"
+                android:text="Bet Name" />
+
+            <TextView
+                android:id="@+id/tvDateAssigned"
+                android:layout_gravity="center"
+                android:text="Date Assigned" />
+
+            <TextView
+                android:id="@+id/tvDateDue"
+                android:layout_gravity="center"
+                android:text="Date Due" />b
+        </TableRow>
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRatedCases"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tlRatedCaseHeader"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+</RelativeLayout>
