@@ -35,7 +35,8 @@ public class MyCasesActivity extends AppCompatActivity {
     Button prevclass;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accepted);
 
@@ -70,7 +71,6 @@ public class MyCasesActivity extends AppCompatActivity {
                     Log.i(TAG, "MyCase: " + case1.getKeyCaseBetId().getObjectId().toString());
                     Log.i(TAG, "Arbitrator: " + case1.getKeyCaseBetId().getObjectId().toString());
                 }
-
             }
         });
 
@@ -88,6 +88,12 @@ public class MyCasesActivity extends AppCompatActivity {
                         //Select challenger as winner
                         event.put("case_Status", "RESOLVED");
                         event.put("case_Winner_Desc", windes);
+
+                        // Get Bet Info based on Case BetId
+
+                        ParseUser betChallenger;
+
+
                         event.setKeyCaseBetWinner(ParseUser.getCurrentUser());
                         //event.put("case_Arbitrator", "BBkTRVg4nb");
                         event.saveInBackground();

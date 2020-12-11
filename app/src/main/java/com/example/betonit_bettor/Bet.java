@@ -9,7 +9,7 @@ import java.util.Date;
 
 @ParseClassName("Bet")
 public class Bet extends ParseObject {
-    private static final String KEY_BET_NAME = "bet_Name";
+    public static final String KEY_BET_NAME = "bet_Name";
     private static final String KEY_BET_AMOUNT = "bet_Amount";
     private static final String KEY_BET_STATUS = "bet_Status";
     private static final String KEY_BET_DESCRIPTION = "bet_Desc";
