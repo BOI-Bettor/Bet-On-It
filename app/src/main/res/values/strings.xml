@@ -62,4 +62,6 @@
     <string name="my_cases_fragment">My Cases Fragment</string>
     <string name="status">Status</string>
     <string name="info">Info</string>
+    <string name="message">Message</string>
+    <string name="showMessages">Show Messages</string>
 </resources>

@@ -107,6 +107,11 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
                         new BHFragment()).commit();
                 break;
 
+            case R.id.nav_message:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SMFragment()).commit();
+                break;
+
             case R.id.nav_acceptcase:
                 Toast.makeText(this, "Not our use case.", Toast.LENGTH_SHORT).show();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

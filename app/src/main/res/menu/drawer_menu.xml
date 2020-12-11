@@ -31,6 +31,11 @@
             android:id="@+id/nav_hist"
             android:icon="@drawable/ic_history"
             android:title="@string/chlHistory" />
+
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_envelope"
+            android:title="@string/showMessages" />
     </group>
 
     <item android:title="@string/arb">
