@@ -2,7 +2,6 @@ package com.example.betonit_bettor;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,9 +10,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,10 +20,8 @@ import androidx.fragment.app.Fragment;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -40,6 +36,7 @@ public class CWFragment extends Fragment {
     Date dateStart, dateEnd;
     Boolean userExist;
     Bet newWager;
+    ImageView ivBetName, ivUsername, ivAmount, ivType, ivStartDate, ivRescDate, ivDesc;
 
     @Nullable
     @Override
@@ -49,6 +46,22 @@ public class CWFragment extends Fragment {
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         View rootView = inflater.inflate(R.layout.fragment_createwager, container, false);
+
+       /* // Set Image Views
+        ivBetName = ivBetName.findViewById(R.id.ivBetName);
+        ivBetName.setImageResource(R.drawable.ic_write); //set the source in java class
+        ivUsername = ivUsername.findViewById(R.id.ivUsername);
+        ivUsername.setImageResource(R.drawable.ic_user);
+        ivAmount = ivAmount.findViewById(R.id.ivAmount);
+        ivAmount.setImageResource(R.drawable.ic_money_bill_alt);
+        ivType = ivType.findViewById(R.id.ivType);
+        ivType.setImageResource(R.drawable.ic_question_circle);
+        ivStartDate = ivStartDate.findViewById(R.id.ivStartDate);
+        ivStartDate.setImageResource(R.drawable.ic_calendar);
+        ivRescDate = ivRescDate.findViewById(R.id.ivRescDate);
+        ivRescDate.setImageResource(R.drawable.ic_calendar_times);
+        ivDesc = ivDesc.findViewById(R.id.ivDesc);
+        ivDesc.setImageResource(R.drawable.ic_edit); */
 
         // Set EditTexts.
 

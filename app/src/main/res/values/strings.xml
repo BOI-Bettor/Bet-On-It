@@ -56,4 +56,8 @@
     <string name="bi_start">Start Date:</string>
     <string name="bi_resc">Rescind Date:</string>
     <string name="bi_desc">Description:</string>
+    <string name="slogan">Put Your Money Where Your Mouth Is</string>
+    <string name="rated_cases_fragment">Rated Cases Fragment</string>
+    <string name="pending_cases_fragment">Pending Cases Fragment</string>
+    <string name="my_cases_fragment">My Cases Fragment</string>
 </resources>

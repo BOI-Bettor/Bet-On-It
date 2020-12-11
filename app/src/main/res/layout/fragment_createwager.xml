@@ -26,7 +26,7 @@
                 android:background="@color/design_default_color_background"
                 android:contentDescription="@string/betName"
                 android:padding="5dp"
-                app:srcCompat="@drawable/ic_bet" />
+                android:src="@drawable/ic_write" />
 
             <EditText
                 android:id="@+id/etBetName"
@@ -56,7 +56,7 @@
                 android:background="@color/design_default_color_background"
                 android:contentDescription="@string/username"
                 android:padding="5dp"
-                app:srcCompat="@drawable/ic_user" />
+                android:src="@drawable/ic_user" />
 
             <EditText
                 android:id="@+id/etUsername"
@@ -90,7 +90,7 @@
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                app:srcCompat="@drawable/ic_money_bill_alt" />
+                android:src="@drawable/ic_money_bill_alt" />
 
             <EditText
                 android:id="@+id/etAmount"
@@ -123,7 +123,7 @@
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                app:srcCompat="@drawable/ic_question_circle" />
+                android:src="@drawable/ic_question_circle" />
 
             <EditText
                 android:id="@+id/etType"
@@ -156,7 +156,8 @@
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                app:srcCompat="@drawable/ic_calendar" />
+                android:src="@drawable/ic_calendar"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:id="@+id/etStartDate"
@@ -175,7 +176,7 @@
                 android:paddingBottom="5dp" />
 
             <ImageView
-                android:id="@+id/ivRescdate"
+                android:id="@+id/ivRescDate"
                 android:layout_width="30dp"
                 android:layout_height="34dp"
                 android:layout_below="@+id/ivStartDate"
@@ -189,7 +190,7 @@
                 android:paddingTop="5dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                app:srcCompat="@drawable/ic_calendar_times" />
+                android:src="@drawable/ic_calendar_times" />
 
             <EditText
                 android:id="@+id/etRescDate"
@@ -211,7 +212,7 @@
                 android:id="@+id/ivDesc"
                 android:layout_width="26dp"
                 android:layout_height="140dp"
-                android:layout_below="@+id/ivRescdate"
+                android:layout_below="@+id/ivRescDate"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="68dp"
                 android:layout_marginTop="15dp"
@@ -219,7 +220,7 @@
                 android:layout_toStartOf="@+id/etDesc"
                 android:background="@color/design_default_color_background"
                 android:padding="5dp"
-                app:srcCompat="@drawable/ic_edit" />
+                android:src="@drawable/ic_edit" />
 
             <EditText
                 android:id="@+id/etDesc"
