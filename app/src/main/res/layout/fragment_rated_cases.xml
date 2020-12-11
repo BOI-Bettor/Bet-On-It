@@ -5,28 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.RatedCasesFragment"
+    tools:context=".RatedCasesFragment"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tvRatedLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rated_cases_fragment" />
-
-    <TextView
-        android:id="@+id/tvRatedCasesLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvRatedLabel"
-        android:text="Rated Cases ()" />
-
     <TableLayout
         android:id="@+id/tlRatedCaseHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvRatedCasesLabel"
         android:stretchColumns="*">
 
         <TableRow>
@@ -43,7 +29,7 @@
             <TextView
                 android:id="@+id/tvDateDue"
                 android:layout_gravity="center"
-                android:text="Date Due" />b
+                android:text="Date Due" />
         </TableRow>
     </TableLayout>
 

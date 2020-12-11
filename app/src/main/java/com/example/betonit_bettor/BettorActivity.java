@@ -95,6 +95,11 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
                         new ChFragment2()).commit();
                 break;
 
+            case R.id.nav_message:
+                Toast.makeText(this, "send me a message.", Toast.LENGTH_SHORT).show();
+
+                break;
+
             case R.id.nav_users:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new FOFragment()).commit();
@@ -108,19 +113,16 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
                 break;
 
             case R.id.nav_acceptcase:
-                Toast.makeText(this, "Not our use case.", Toast.LENGTH_SHORT).show();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new PendingCasesFragment()).commit();
                 break;
 
             case R.id.nav_showcases:
-                Toast.makeText(this, "Also not our use case.", Toast.LENGTH_SHORT).show();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MyCasesFragment()).commit();
                 break;
 
             case R.id.nav_ratecases:
-                Toast.makeText(this, "Also definitely not our use case.", Toast.LENGTH_SHORT).show();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new RatedCasesFragment()).commit();
                 break;

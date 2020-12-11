@@ -7,15 +7,6 @@
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/pending_cases_fragment" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pending Cases ()" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPendingCases"

@@ -4,28 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.MyCasesFragment"
+    tools:context=".MyCasesFragment"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tvMyFragLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/my_cases_fragment" />
 
-    <TextView
-        android:id="@+id/tvMyCasesLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvMyFragLabel"
-        android:text="My Cases ()" />
 
     <TableLayout
         android:id="@+id/tlMyCaseHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvMyCasesLabel"
         android:stretchColumns="*">
 
         <TableRow>

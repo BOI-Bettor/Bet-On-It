@@ -110,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
         final ParseUser parseUser = ParseUser.getCurrentUser();
         ParseQuery<ParseUser> query = ParseUser.getQuery();
         query.whereEqualTo("isAdmin", true);
+        query.whereNotEqualTo("user_Status", "BANNED");
         query.whereEqualTo("username", parseUser.getUsername());
         query.findInBackground(new FindCallback<ParseUser>() {
            @Override
