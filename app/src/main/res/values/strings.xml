@@ -60,4 +60,6 @@
     <string name="rated_cases_fragment">Rated Cases Fragment</string>
     <string name="pending_cases_fragment">Pending Cases Fragment</string>
     <string name="my_cases_fragment">My Cases Fragment</string>
+    <string name="status">Status</string>
+    <string name="info">Info</string>
 </resources>
