@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="25dp"
+    tools:context=".BetInfoActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/betCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="SEND A MESSAGE"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username:"
+                android:fontFamily="sans-serif-black"
+                android:textSize="17sp"
+                android:layout_below="@id/tvMsg"/>
+
+            <EditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter user to receive message."
+                android:layout_below="@id/tvUser"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message Body:"
+                android:fontFamily="sans-serif-black"
+                android:textSize="17sp"
+                android:layout_below="@id/etUsername"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/etBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBody"
+                android:hint="Enter your message (limit 250 words)."
+                android:inputType="textMultiLine"
+                android:textSize="15sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="#9fec9c"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp"
+                android:id="@+id/cardView"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/etBody"
+                android:layout_centerHorizontal="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/btnSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="SEND"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
