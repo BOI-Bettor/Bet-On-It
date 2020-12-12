@@ -28,6 +28,7 @@ public class ParseApplication extends Application {
         // Register Model
         ParseObject.registerSubclass(Bet.class);
         ParseObject.registerSubclass(Case.class);
+        ParseObject.registerSubclass(Message.class);
 
         // Connect to Parse server
         Parse.initialize(new Parse.Configuration.Builder(this)

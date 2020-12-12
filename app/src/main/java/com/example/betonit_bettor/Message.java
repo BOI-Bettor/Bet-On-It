@@ -2,6 +2,7 @@ package com.example.betonit_bettor;
 
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 
 @ParseClassName("Message")
 public class Message extends ParseObject {
@@ -18,21 +19,17 @@ public class Message extends ParseObject {
         return getString(KEY_MESSAGE_STATUS);
     }
 
-    public String getKeyMessageSender() {
-        return getString(KEY_MESSAGE_SENDER);
-    }
+    public ParseUser getKeyMessageSender() { return getParseUser(KEY_MESSAGE_SENDER); }
 
-    public String getKeyMessageReceiver() {
-        return getString(KEY_MESSAGE_RECEIVER);
+    public ParseUser getKeyMessageReceiver() {
+        return getParseUser(KEY_MESSAGE_RECEIVER);
     }
 
     public void setKeyMessageBody(String message_Body) {
         put(KEY_MESSAGE_BODY, message_Body);
     }
 
-    public void setKeyMessageStatus(String message_Status) {
-        put(KEY_MESSAGE_STATUS, message_Status);
-    }
+    public void setKeyMessageStatus(String message_Status) { put(KEY_MESSAGE_STATUS, message_Status); }
 
     public void setKeyMessageSender(String message_Sender) {
         put(KEY_MESSAGE_SENDER, message_Sender);

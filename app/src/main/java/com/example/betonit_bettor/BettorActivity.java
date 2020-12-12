@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.parse.GetDataCallback;
@@ -93,8 +92,8 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
                 break;
 
             case R.id.nav_message:
-                Toast.makeText(this, "send me a message.", Toast.LENGTH_SHORT).show();
-
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new RMFragment()).commit();
                 break;
 
             case R.id.nav_users:

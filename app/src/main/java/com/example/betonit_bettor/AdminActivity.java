@@ -106,8 +106,9 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
                 break;
 
             case R.id.nav_message:
-                Toast.makeText(this, "send me a message.", Toast.LENGTH_SHORT).show();
-
+//                Toast.makeText(this, "send me a message.", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, MessageViewActivity.class);
+                startActivity(i);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
