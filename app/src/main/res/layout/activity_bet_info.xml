@@ -4,44 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserViewActivity">
+    android:layout_marginTop="25dp"
+    tools:context=".BetInfoActivity">
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/desc"
-        android:layout_width="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/username"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"/>
-
-    <Button
-        android:id="@+id/buttonAccept"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/betCard"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/desc"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="100dp"
-        android:text="@string/accept"
-        android:backgroundTint="@color/PastelGreen" />
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
 
-    <Button
-        android:id="@+id/buttonReject"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/desc"
-        android:layout_marginTop="50dp"
-        android:layout_toEndOf="@id/buttonAccept"
-        android:layout_centerHorizontal="true"
-        android:text="@string/reject"
-        android:backgroundTint="@color/ErrorRed" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Username"
+            android:fontFamily="sans-serif-black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/betName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Bet Name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/betAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/betName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Bet Amount"
+            android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvbetStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/betAmount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Date Start"
+                android:layout_alignParentStart="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/betStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvbetStart"
+                android:layout_marginTop="10dp"
+                android:text="Date Start"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvbetEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/betAmount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Date End"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/betEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvbetEnd"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Date End"
+                android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/betDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/betStart"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:width="300dp"
+            android:gravity="center"
+            android:text="Bet description goes here."
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/betDesc"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/PastelGreen"
+            android:text="@string/accept" />
+
+
+        <Button
+            android:id="@+id/buttonReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonAccept"
+            android:backgroundTint="@color/ErrorRed"
+            android:layout_centerHorizontal="true"
+            android:text="@string/reject" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

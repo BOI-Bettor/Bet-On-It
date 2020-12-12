@@ -41,6 +41,9 @@ public class ParseApplication extends Application {
         ParseACL defaultACL = new ParseACL();
         defaultACL.setPublicReadAccess(true);
         ParseACL.setDefaultACL(defaultACL, true);
+
     }
+
+
 
 }

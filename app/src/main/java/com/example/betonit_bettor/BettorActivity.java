@@ -24,9 +24,6 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
-import org.parceler.Parcels;
-import org.w3c.dom.Text;
-
 public class BettorActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String TAG = "BettorActivity";
@@ -92,7 +89,7 @@ public class BettorActivity extends AppCompatActivity implements NavigationView.
 
             case R.id.nav_challenge:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ChFragment2()).commit();
+                        new ChFragment()).commit();
                 break;
 
             case R.id.nav_message:

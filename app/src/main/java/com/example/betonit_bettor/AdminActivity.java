@@ -20,8 +20,10 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.parse.GetDataCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseFile;
+import com.parse.ParseRole;
 import com.parse.ParseUser;
 
 public class AdminActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,6 +37,15 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
+
+        ParseACL roleACL = new ParseACL();
+        roleACL.setPublicReadAccess(true);
+        roleACL.setWriteAccess(parseUser, true);
+
+        ParseRole role = new ParseRole("Admin", roleACL);
+        role.getUsers().add(ParseUser.getCurrentUser());
+        role.saveInBackground();
+
 
         // IMPLEMENT TOOLBAR
         Toolbar toolbar = findViewById(R.id.toolbar_admin);

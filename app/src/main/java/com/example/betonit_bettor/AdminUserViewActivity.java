@@ -29,7 +29,7 @@ public class AdminUserViewActivity extends AppCompatActivity {
     Button btnDeact;
     Button btnBan;
     Button btnAct;
-    ParseUser currBOIuser;
+    ParseUser currBOIuser = new ParseUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,6 @@ public class AdminUserViewActivity extends AppCompatActivity {
         btnBan = findViewById(R.id.btnBan);
         btnAct = findViewById(R.id.btnActivate);
 
-        findUsers();
-
         Intent intent = getIntent();
         if(intent.getExtras() != null){
             usersModel = (UsersModel) intent.getSerializableExtra("users");
@@ -54,6 +52,8 @@ public class AdminUserViewActivity extends AppCompatActivity {
             userStatus.setText(usersModel.getStatus());
         }
 
+        findUsers();
+
         btnPause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +61,7 @@ public class AdminUserViewActivity extends AppCompatActivity {
                 usersModel.setStatus("Paused");
                 userStatus.setText("STATUS: " + usersModel.getStatus());
                 currBOIuser.put("user_Status", "Paused");
+                currBOIuser.saveInBackground();
             }
         });
 
@@ -71,6 +72,7 @@ public class AdminUserViewActivity extends AppCompatActivity {
                 usersModel.setStatus("Inactive");
                 userStatus.setText("STATUS: " + usersModel.getStatus());
                 currBOIuser.put("user_Status", "Inactive");
+                currBOIuser.saveInBackground();
             }
         });
 
@@ -81,6 +83,7 @@ public class AdminUserViewActivity extends AppCompatActivity {
                 usersModel.setStatus("Banned");
                 userStatus.setText("STATUS: " + usersModel.getStatus());
                 currBOIuser.put("user_Status", "Banned");
+                currBOIuser.saveInBackground();
             }
         });
 
@@ -91,6 +94,7 @@ public class AdminUserViewActivity extends AppCompatActivity {
                 usersModel.setStatus("Active");
                 userStatus.setText("STATUS: " + usersModel.getStatus());
                 currBOIuser.put("user_Status", "Active");
+                currBOIuser.saveInBackground();
             }
         });
     }

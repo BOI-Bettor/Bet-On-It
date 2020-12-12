@@ -13,8 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.FindCallback;
 import com.parse.LogInCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
+import com.parse.ParseRole;
 import com.parse.ParseUser;
 
 import java.util.List;
@@ -125,6 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                    else
                    {
                        Log.d(TAG, "Admin user: " + parseUser.getUsername() + " : FOUND");
+                       createRole();
                        goAdminActivity();
                    }
                }
@@ -145,4 +148,37 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+    // PARSE ALL USERS.
+    public void queryUsers(final List<UsersModel> usersList) {
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.findInBackground(new FindCallback<ParseUser>() {
+            public void done(List<ParseUser> users, ParseException e) {
+
+                if (e == null) {
+                    Log.i(TAG, "Users stashed in background.");
+                    ParseACL adminAccess = new ParseACL();
+                    for (ParseUser user : users) {
+
+                        user.saveInBackground();
+                    }
+                } else {
+                    Log.e(TAG, "Something went wrong.");
+                }
+            }
+        });
+    }
+
+    public void createRole() {
+
+        ParseACL roleACL = new ParseACL();
+        roleACL.setPublicReadAccess(true);
+        roleACL.setWriteAccess(ParseUser.getCurrentUser(), true);
+
+        ParseRole role = new ParseRole("Admin", roleACL);
+        role.getUsers().add(ParseUser.getCurrentUser());
+        role.saveInBackground();
+
+    }
+
 }

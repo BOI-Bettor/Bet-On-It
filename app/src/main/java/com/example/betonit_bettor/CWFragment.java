@@ -21,6 +21,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.parse.FindCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -165,7 +166,15 @@ public class CWFragment extends Fragment {
 
                             if (e == null && users != null) {
                                 for (ParseUser user : users) {
+
+                                    ParseACL betACL = new ParseACL();
+                                    betACL.setReadAccess(user, true);
+                                    betACL.setWriteAccess(user, true);
+                                    betACL.setReadAccess(ParseUser.getCurrentUser(), true);
+                                    betACL.setWriteAccess(ParseUser.getCurrentUser(), true);
+
                                     Bet bet = new Bet();
+                                    bet.setACL(betACL);
                                     bet.setBetName(betName);
                                     bet.setBetChallengee(user);
                                     bet.setBetChallenger(ParseUser.getCurrentUser());
