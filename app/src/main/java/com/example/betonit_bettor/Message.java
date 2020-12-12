@@ -31,11 +31,11 @@ public class Message extends ParseObject {
 
     public void setKeyMessageStatus(String message_Status) { put(KEY_MESSAGE_STATUS, message_Status); }
 
-    public void setKeyMessageSender(String message_Sender) {
-        put(KEY_MESSAGE_SENDER, message_Sender);
+    public void setKeyMessageSender(ParseUser sender) {
+        put(KEY_MESSAGE_SENDER, sender);
     }
 
-    public void setKeyMessageReceiver(String message_Receiver) {
-        put(KEY_MESSAGE_RECEIVER, message_Receiver);
+    public void setKeyMessageReceiver(ParseUser receiver) {
+        put(KEY_MESSAGE_RECEIVER, receiver);
     }
 }

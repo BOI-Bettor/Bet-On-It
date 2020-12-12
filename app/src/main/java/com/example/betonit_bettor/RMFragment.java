@@ -182,7 +182,7 @@ public class RMFragment extends Fragment {
             TextView usernames = view.findViewById(R.id.name);
             TextView idfk = view.findViewById(R.id.nameRN);
             usernames.setText(adminList.get(position));
-            idfk.setText("your ass got an admin message");
+            idfk.setText("Message from admin.");
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
