@@ -181,8 +181,10 @@ public class RMFragment extends Fragment {
 
             TextView usernames = view.findViewById(R.id.name);
             TextView idfk = view.findViewById(R.id.nameRN);
+            ImageView image = view.findViewById(R.id.images);
             usernames.setText(adminList.get(position));
             idfk.setText("Message from admin.");
+            image.setImageResource(R.drawable.ic_envelope);
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override

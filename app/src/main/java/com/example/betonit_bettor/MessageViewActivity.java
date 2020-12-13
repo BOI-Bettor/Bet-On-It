@@ -89,7 +89,7 @@ public class MessageViewActivity extends AppCompatActivity {
                                     message.setACL(messageACL);
                                     message.saveInBackground();
                                     dlg.dismiss();
-                                    alertDisplayer("Bet Received", "Your challenge has been sent!");
+                                    alertDisplayer("Message Sent", "Your message has been sent!");
                                 }
                             } else {
                                 Log.i(TAG, "help me god");

@@ -50,7 +50,7 @@ public class ChFragment extends ListFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        getActivity().setTitle("Bet List");
+        getActivity().setTitle("Awaiting Challenges");
 
         View rootView = inflater.inflate(R.layout.fragment_challenges, container, false);
         listView = rootView.findViewById(android.R.id.list);

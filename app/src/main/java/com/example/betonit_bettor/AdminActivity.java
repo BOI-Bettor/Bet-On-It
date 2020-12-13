@@ -28,7 +28,7 @@ import com.parse.ParseUser;
 
 public class AdminActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-        public static final String TAG = "AdminActivity";
+    public static final String TAG = "AdminActivity";
     private DrawerLayout drawer;
     final ParseUser parseUser = ParseUser.getCurrentUser();
     String username, realName;
@@ -45,7 +45,6 @@ public class AdminActivity extends AppCompatActivity implements NavigationView.O
         ParseRole role = new ParseRole("Admin", roleACL);
         role.getUsers().add(ParseUser.getCurrentUser());
         role.saveInBackground();
-
 
         // IMPLEMENT TOOLBAR
         Toolbar toolbar = findViewById(R.id.toolbar_admin);

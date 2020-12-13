@@ -16,6 +16,7 @@
         <activity android:name=".MessageViewActivity" />
         <activity android:name=".UserViewActivity" />
         <activity android:name=".BetInfoActivity" />
+        <activity android:name=".BetInfo2Activity" />
         <activity android:name=".PendingDetailActivity"/>
         <activity android:name=".MyCasesActivity" />
         <activity android:name=".RatedDetailActivity"/>

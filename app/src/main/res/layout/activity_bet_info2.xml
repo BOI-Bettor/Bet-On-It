@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="25dp"
+    tools:context=".BetInfo2Activity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/betCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Username"
+            android:fontFamily="sans-serif-black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/betName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Bet Name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/betAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/betName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Bet Amount"
+            android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvbetStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/betAmount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Date Start"
+                android:layout_alignParentStart="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/betStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvbetStart"
+                android:layout_marginTop="10dp"
+                android:text="Date Start"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvbetEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/betAmount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Date End"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/betEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvbetEnd"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:text="Date End"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/betDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/betStart"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:width="300dp"
+                android:gravity="center"
+                android:inputType="textMultiLine"
+                android:text="Bet description goes here."
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvWinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/betDesc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:width="300dp"
+                android:gravity="center"
+                android:text="Decide Winner"
+                android:fontFamily="sans-serif-black"
+                android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnChallenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/betDesc"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/GreyWhite"
+            android:text="Challenger" />
+
+        <Button
+            android:id="@+id/btnChallengee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/betDesc"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/GreyWhite"
+            android:text="Challengee" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
