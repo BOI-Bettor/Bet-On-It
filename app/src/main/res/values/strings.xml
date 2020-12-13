@@ -16,6 +16,8 @@
     <string name="back4app_server_url">https://parseapi.back4app.com/</string>
     <string name="back4app_app_id">Jd9Mbe2J6LaTOfwhH4N7vV1fbcn5ML3ImH65Me4W</string>
     <string name="back4app_client_key">CqbgDG6Mc9BOIzsGzFltxxR1nAlSDlk2wzPMVSK5</string>
+<!--    <string name="back4app_app_id">HN4zvsNdFVKCysvRvkofvxiH0siW8FJpUuNc9htf</string>-->
+<!--    <string name="back4app_client_key">HoK9JoBJTyHpwKiKthv5TZT1pXUr7qMTuKf4KpHo</string>-->
     <string name="confirmHint">Confirm Password</string>
     <string name="imgLogo">Bet On It Logo</string>
     <string name="search">Search</string>

@@ -20,7 +20,7 @@ import java.text.DecimalFormat;
 
 public class BetInfo2Activity extends AppCompatActivity {
 
-    String challenger;
+    String challenger, challengerUsername;
     String betId;
     String TAG = "Bet Info";
     Bet bet = new Bet();
@@ -49,6 +49,21 @@ public class BetInfo2Activity extends AppCompatActivity {
             betId = (String) intent.getSerializableExtra("betObjectId");
             challenger = (String) intent.getSerializableExtra("challengerUser");
             username.setText(challenger);
+
+            ParseQuery<ParseUser> challengerUser = ParseUser.getQuery();
+            challengerUser.getInBackground(challenger, new GetCallback<ParseUser>(){
+                public void done(ParseUser object, ParseException e) {
+                    if (e == null) {
+                        challengerUsername = object.getUsername();
+                        Log.i(TAG, object.getUsername());
+                        username.setText(challengerUsername);
+//                        btnChallenger.setText(challengerUsername);
+                    } else {
+                        Log.i(TAG, "fuck me");
+                    }
+                }
+            });
+//            username.setText(challengerUsername);
 
             ParseQuery<ParseObject> query = ParseQuery.getQuery("Bet");
             query.getInBackground(betId, new GetCallback<ParseObject>() {
@@ -88,13 +103,14 @@ public class BetInfo2Activity extends AppCompatActivity {
                     public void done(Bet object, ParseException e) {
                         if (e == null) {
                             if (object.getBetChallenger().getObjectId().equals(ParseUser.getCurrentUser().getObjectId())) {
-                                object.put("bet_vote_1", ParseUser.getCurrentUser());
+                                object.put("bet_vote_1", object.getBetChallenger());
                                 object.saveInBackground();
                             }
                             else {
-                                object.put("bet_vote_2", ParseUser.getCurrentUser());
+                                object.put("bet_vote_2", object.getBetChallenger());
                                 object.saveInBackground();
                             }
+                            checkIfComplete();
                             alertDisplayer("Vote Sent", "Your decision has been sent.");
                         } else {
                             Log.e(TAG, "Please, kill me.");
@@ -121,13 +137,41 @@ public class BetInfo2Activity extends AppCompatActivity {
                                 object.put("bet_vote_2", object.getBetChallengee());
                                 object.saveInBackground();
                             }
+                            checkIfComplete();
                             alertDisplayer("Vote Sent", "Your decision has been sent.");
                         }
                     }
                 });
             }
         });
+    }
 
+    private void checkIfComplete() {
+        ParseQuery<Bet> bet = ParseQuery.getQuery("Bet");
+        bet.getInBackground(betId, new GetCallback<Bet>() {
+            public void done(Bet object, ParseException e) {
+                if (object.getBetStatus().equals("ACCEPTED")) {
+
+                    ParseUser challengerVote, challengeeVote;
+                    challengerVote = object.getParseUser("bet_vote_1");
+                    challengeeVote = object.getParseUser("bet_vote_2");
+
+                    if (challengeeVote != null && challengerVote != null) {
+
+                        if (challengerVote.getObjectId().equals(challengeeVote.getObjectId())) {
+                            object.setBetStatus("COMPLETE");
+                            object.put("bet_Winner", challengerVote);
+                            object.saveInBackground();
+                        }
+
+                        else {
+                            object.setBetStatus("ARBITRATION");
+                            object.saveInBackground();
+                        }
+                    }
+                }
+            }
+        });
     }
 
     private void alertDisplayer(String title,String message){

@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
                    {
                        Log.d(TAG, "Admin user: " + parseUser.getUsername() + " : FOUND");
                        createRole();
-//                       goAdminActivity();
+                       goAdminActivity();
                    }
                }
            }

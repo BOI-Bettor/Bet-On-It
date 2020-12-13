@@ -24,6 +24,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
 import com.parse.FindCallback;
+import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
@@ -146,7 +147,7 @@ public class BHFragment extends Fragment {
             TextView betName = view.findViewById(R.id.tvChallenge);
             Button btnInfo = view.findViewById(R.id.btnInfo);
 
-            username.setText(filteredChallenges.get(position));
+            username.setText(challengers.get(position));
             betName.setText(betsList.get(position).getBetName());
 
             // View betting information.
@@ -157,7 +158,7 @@ public class BHFragment extends Fragment {
 //                  startActivity(new Intent(getActivity(), BetInfoActivity.class));
                     Intent i = new Intent(getActivity(), BetInfo2Activity.class);
                     i.putExtra("betObjectId", betsList.get(position).getObjectId());
-                    i.putExtra("challengerUser", filteredChallenges.get(position));
+                    i.putExtra("challengerUser", challengers.get(position));
                     startActivity(i);
 
 //                    startActivity(new Intent(getActivity(), BetInfoActivity.class)
@@ -225,19 +226,20 @@ public class BHFragment extends Fragment {
                             bet.getBetStatus();
                             bet.getBetAmount();
                             betsList.add(bet);
+                            challengers.add(ParseUser.getCurrentUser().getUsername());
 
-                            // THIS IS AWFUL. But, anyway, queries the challenger.
-                            ParseQuery<ParseUser> query = ParseUser.getQuery();
-                            query.whereEqualTo("objectId", bet.getBetChallenger().getObjectId());
-                            query.findInBackground(new FindCallback<ParseUser>() {
-                                public void done(List<ParseUser> objects, ParseException e) {
-                                    if (e == null) {
-                                        for (ParseUser object : objects) {
-                                            challengers.add(object.getUsername());
-                                        }
-                                    }
-                                }
-                            });
+//                            // THIS IS AWFUL. But, anyway, queries the challenger.
+//                            ParseQuery<ParseUser> query = ParseUser.getQuery();
+//                            query.whereEqualTo("objectId", bet.getBetChallenger().getObjectId());
+//                            query.findInBackground(new FindCallback<ParseUser>() {
+//                                public void done(List<ParseUser> objects, ParseException e) {
+//                                    if (e == null) {
+//                                        for (ParseUser object : objects) {
+//                                            challengers.add(object.getUsername());
+//                                        }
+//                                    }
+//                                }
+//                            });
                         }
                     }
                 } else {
@@ -262,19 +264,19 @@ public class BHFragment extends Fragment {
                             bet.getBetStatus();
                             bet.getBetAmount();
                             betsList.add(bet);
+                            challengers.add(bet.getBetChallenger().getObjectId());
 
-                            // THIS IS AWFUL. But, anyway, queries the challenger.
-                            ParseQuery<ParseUser> query = ParseUser.getQuery();
-                            query.whereEqualTo("objectId", bet.getBetChallenger().getObjectId());
-                            query.findInBackground(new FindCallback<ParseUser>() {
-                                public void done(List<ParseUser> objects, ParseException e) {
-                                    if (e == null) {
-                                        for (ParseUser object : objects) {
-                                            challengers.add(object.getUsername());
-                                        }
-                                    }
-                                }
-                            });
+//                            ParseQuery<ParseUser> challengerUser = ParseUser.getQuery();
+//                            challengerUser.getInBackground(bet.getBetChallenger().getObjectId(), new GetCallback<ParseUser>(){
+//                                public void done(ParseUser object, ParseException e) {
+//                                    if (e == null) {
+//                                        challengers.add(object.getUsername());
+//                                        Log.i(TAG, object.getUsername());
+//                                    } else {
+//                                        Log.i(TAG, "fuck me");
+//                                    }
+//                                }
+//                            });
                         }
                     }
                 } else {
